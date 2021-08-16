@@ -14,6 +14,9 @@ Selanjutnya anda sudah bisa menggunakan tools dengan cara :
 1. Buka website apapun, kemudian klik 2 kali pada kata/text yang diinginkan, atau bisa dengan cara memblock text/kalimat,
 2. Setelah itu akan muncul popup tombol `Go translate`, jika anda klik itu akan membuka tab baru ke translate google dengan text / kalimat yang anda higlight sebelumnya beserta terjemahan nya.
 
+Meskipun begitu, tools ini masih banyak kekurangan, sehinnga harap untuk dimaklumi, dan silahkan jika berkenan siapa saja untuk menyempurnakan nya.
+
+
 TERIMAKASIH, SEMOGA BERMANFAAT
 
 
