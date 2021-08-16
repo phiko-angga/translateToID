@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Scrap to ID",
+    "version": "0.1",
+    "permissions": [
+      "tabs",
+      "storage",
+      "downloads",
+      "activeTab",
+      "contextMenus",
+      "\u003Call_urls>",
+      "<all_urls>"
+    ],
+    "background": {
+      "page": "background.html",
+      "persistent": true
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "http://*/*", "https://*/*"
+        ],
+        "js": ["jquery-2.2.4.min.js", "content.js"],
+        "css": ["css/style.css"]
+      }
+    ],
+    "browser_action": {
+      "default_icon": "ico.png",
+      "default_popup": "popup.html"
+    }
+}
