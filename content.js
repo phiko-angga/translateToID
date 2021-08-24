@@ -1,3 +1,5 @@
+var mouseDownTop; var mouseUpTop;
+
 function removeSpace(x) {
   return x.replace(/^\s+|\s+$/gm,'');
 }
@@ -54,8 +56,8 @@ function addPopupToggle(event, url){
 	
 	//JS
 	var x = event.clientX;
-	var y = event.clientY;
-	var offY = element.offsetHeight;
+	var y = mouseDownTop < mouseUpTop ? mouseDownTop : mouseUpTop;
+	var offY = 75;//element.offsetHeight;
 	console.log('y '+y);
 	console.log('element.offsetHeight '+element.offsetHeight);
 	
@@ -70,10 +72,10 @@ function fireTranslate(event){
 	if(elem){
 		
 		if (elem !== event.target && !elem.contains(event.target)) {  
-			console.log('SELECTION : '+getSelectionText(event));
+			let text = getSelectionText(event);
 		}
 	}else{
-		console.log('SELECTION : '+getSelectionText(event));
+		let text = getSelectionText(event);
 	}
 }
 
@@ -104,10 +106,12 @@ document.addEventListener('dblclick', function( event ) {
 	fireTranslate(event);
 });
 document.addEventListener('mouseup', function( event ) {
+	mouseUpTop = event.clientY;
 	fireTranslate(event);
 });
  
 document.addEventListener("mousedown", (evt) => {
+	mouseDownTop = evt.clientY;
 	fireRemove(evt);
 });
 document.addEventListener("scrollHeight", (evt) => {
